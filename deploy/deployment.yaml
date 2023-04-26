@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wtpl
+  labels:
+    app: wtpl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wtpl
+  template:
+    metadata:
+      name: wtpl
+      labels:
+        app: wtpl
+    spec:
+      containers:
+        - name: wtpl
+          image: docker:latest
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      

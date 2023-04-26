@@ -1,0 +1,17 @@
+app:
+  name:
+  mode: dev
+logger:
+  path: ["stdout", "stderr"]
+  level: info
+  compress: true
+  retain: 30d
+  filesize: 30m
+server:
+  ip: 127.0.0.1
+  port: 8080
+  tlsKey:
+  tlsCert:
+sqlite:
+  path: .
+
